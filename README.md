@@ -1,50 +1,90 @@
-# React + TypeScript + Vite
+# New County Suite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+New County Suite is a modern web application designed for seamless apartment rental management. It features a public-facing page for potential guests to explore suite details and make reservations, along with a secure private admin dashboard for managing bookings and user accounts.
 
-Currently, two official plugins are available:
+## Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Public Page
+- **Suite Details**: View detailed suite information, including high-quality images and descriptions.
+- **Contact Button**: Opens a popup with options to contact via email or phone.
+- **Reservation Button**: Opens a popup for selecting available dates and entering guest details.
 
-## Expanding the ESLint configuration
+### Admin Dashboard (Private)
+- **Secure Login**: Accessible only to authenticated users.
+- **Reservation Management**: View reservations in a **list view** or a **calendar view**, and accept or cancel reservations with ease.
+- **Admin Management**: Add or manage additional admins to help oversee the booking system.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
+Follow these steps to set up the project locally:
 
-- Configure the top-level `parserOptions` property like this:
+- **Prerequisites**: Ensure you have Node.js (v16 or later) and Firebase CLI installed for hosting.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Clone the repository:
+```bash
+git clone https://github.com/<your-username>/new-county-suite.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Navigate to the project directory:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd new-county-suite
 ```
+Install dependencies:
+```bash
+npm install
+```
+Start the development server:
+```bash
+npm run dev
+```
+Build the project for production:
+```bash
+npm run build
+```
+## Deployment
+To deploy on Firebase Hosting:
+
+Install the Firebase CLI:
+
+```bash
+npm install -g firebase-tools
+```
+Login to Firebase:
+```bash
+firebase login
+```
+Initialize Firebase Hosting:
+```bash
+firebase init hosting
+```
+Deploy the application:
+```bash
+firebase deploy
+```
+## Technologies Used
+- **Frontend**: React.js, Tailwind CSS.
+- **Backend**: Firebase Authentication, Firestore.
+- **Calendar**: react-big-calendar.
+- **Date Picker**: react-datepicker.
+  
+### Contributing
+Fork the repository, create a feature branch, and commit your changes:
+```bash
+git checkout -b feature/your-feature
+git commit -m "Add your feature"
+git push origin feature/your-feature
+```
+Open a pull request to submit your contribution.
+
+
+
+
+
+
+
+
+
+
+
+
